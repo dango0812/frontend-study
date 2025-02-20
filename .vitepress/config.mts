@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -6,8 +6,23 @@ export default defineConfig({
   description: "Frontend 개발의 기본 개념부터 핵심까지, JavaScript, TypeScript, React, Next.js, CS 등 다양한 주제를 다뤄요. 🐍",
   lastUpdated: true,
 
+  head: [
+    [
+      "link",
+      { rel: "icon", type: "image/x-icon", href: "/favicon/favicon.ico" },
+    ],
+    [
+      "link", { rel: "manifest", href: "/favicon/site.webmanifest" }
+    ],
+    [
+      "link", { rel: "apple-touch-icon", href: "/favicon/apple-touch-icon.png" }
+    ],
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: "/icons/logo.svg",
+
     nav: [
       { text: "홈", link: "/" },
     ],
@@ -32,7 +47,9 @@ export default defineConfig({
       },
       {
         text: "Javascript",
-        items: []
+        items: [
+          { text: "var, let, const", link: "/study/javascript/var-let-const" }
+        ]
       },
       {
         text: "Typescript",
