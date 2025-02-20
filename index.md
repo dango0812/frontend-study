@@ -5,6 +5,13 @@ layout: home
 hero:
   name: "Frontend Study"
   tagline: "기본 개념부터 실전 대비까지 한 번에!"
+  image:
+    loading: eager
+    fetchpriority: high
+    decoding: async
+    src: /images/hero.webp
+    alt: Frontend Study Hero
+
   actions:
     - theme: brand
       text: 시작하기
